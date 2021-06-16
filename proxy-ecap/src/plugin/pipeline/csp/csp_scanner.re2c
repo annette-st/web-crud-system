@@ -1,0 +1,65 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include "plugin/pipeline/csp/csp_scanner.h"
+
+/* -------------------------------------------------------------------------------------------------- */
+void csp_scanner_init(csp_scanner* input, const char* text_begin, const char* text_end)
+{
+    input->top  = text_begin;
+    input->cur  = text_begin;
+    input->pos  = text_begin;
+    input->end  = text_end;
+
+    input->token_begin = NULL;
+    input->token_end = NULL;
+    input->token_type = 0;
+}
+
+/* -------------------------------------------------------------------------------------------------- */
+static int create_token (csp_scanner* lexer, int type)
+{
+  lexer->token_type  = type;
+  lexer->token_begin = lexer->top;
+  lexer->token_end   = lexer->cur;
+  return 1;
+}
+/* -------------------------------------------------------------------------------------------------- */
+int csp_scan(csp_scanner* lexer)
+{
+    #define   YYCTYPE     char
+    #define   YYCURSOR    lexer->cur
+    #define   YYMARKER    lexer->ptr
+
+    regular:
+      if (lexer->cur >= lexer->end)
+        {
+          lexer->cur = lexer->end;
+          return 0;
+        }
+      lexer->top = lexer->cur;
+
+      /*!re2c
+        re2c:yyfill:enable = 0;
+        whitespace = [ \t\v\f]+;
+        identifier = ([\043-\176!] \ [;])+;
+        string     = (identifier | [;]) ;
+        any        = [\000-\377];
+        ESC        = [\\] ;
+        SQ         = ['] ;
+        DQ         = ["] ;
+
+        STRING1  = SQ  string+ SQ ;
+        STRING2  = DQ  string+ DQ ;
+       */
+
+        /*!re2c
+         whitespace        { goto regular; }
+         ";"               { return create_token (lexer, CSP_END_OF_LIST); }
+         identifier        { return create_token (lexer, CSP_TOKEN); }
+         STRING1           { return create_token (lexer, CSP_TOKEN); }
+         STRING2           { return create_token (lexer, CSP_TOKEN); }
+         any               {return 0;}
+
+         */
+    return 0;
+}

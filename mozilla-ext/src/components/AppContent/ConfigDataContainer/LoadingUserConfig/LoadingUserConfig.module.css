@@ -1,0 +1,22 @@
+.emptyConfigContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 135px;
+    width: 100%;
+    background-color: #ffffff;
+}
+.emptyConfigContainer img {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 8px;
+}
+.loadingMessage {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 8px;
+    line-height: 9px;
+    color: #000000;
+    margin-top: 6px;
+}

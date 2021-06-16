@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/static/css/main.848f07c2.chunk.css",
+    "main.js": "/static/js/main.baabfd3f.chunk.js",
+    "main.js.map": "/static/js/main.baabfd3f.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.a3fe5abe.js",
+    "runtime-main.js.map": "/static/js/runtime-main.a3fe5abe.js.map",
+    "static/js/2.14b889f7.chunk.js": "/static/js/2.14b889f7.chunk.js",
+    "static/js/2.14b889f7.chunk.js.map": "/static/js/2.14b889f7.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.c761e410cf1ab90dba47f453a50ab99a.js": "/precache-manifest.c761e410cf1ab90dba47f453a50ab99a.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.848f07c2.chunk.css.map": "/static/css/main.848f07c2.chunk.css.map",
+    "static/media/icn-arrow-down.svg": "/static/media/icn-arrow-down.379eac92.svg",
+    "static/media/icn-arrow-up.svg": "/static/media/icn-arrow-up.dca113eb.svg",
+    "static/media/icn-back-blue.svg": "/static/media/icn-back-blue.46864436.svg",
+    "static/media/icn-btn-loading.svg": "/static/media/icn-btn-loading.a274921a.svg",
+    "static/media/icn-check-mark.svg": "/static/media/icn-check-mark.da2aa73a.svg",
+    "static/media/icn-delete.svg": "/static/media/icn-delete.f1eb1710.svg",
+    "static/media/icn-done.svg": "/static/media/icn-done.21356da0.svg",
+    "static/media/icn-edit-cancel.svg": "/static/media/icn-edit-cancel.7fa1083f.svg",
+    "static/media/icn-edit.svg": "/static/media/icn-edit.fc0e45cf.svg",
+    "static/media/icn-form-config.svg": "/static/media/icn-form-config.62b60b31.svg",
+    "static/media/icn-gears.svg": "/static/media/icn-gears.cfe45382.svg",
+    "static/media/icn-help.svg": "/static/media/icn-help.65640d03.svg",
+    "static/media/icn-info.svg": "/static/media/icn-info.50e7f6f1.svg",
+    "static/media/icn-table-config.svg": "/static/media/icn-table-config.66352c88.svg",
+    "static/media/logo.svg": "/static/media/logo.a16aa3dd.svg",
+    "static/media/select-for-2a.gif": "/static/media/select-for-2a.4052df19.gif",
+    "static/media/select-for-2b.gif": "/static/media/select-for-2b.14807556.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a3fe5abe.js",
+    "static/js/2.14b889f7.chunk.js",
+    "static/css/main.848f07c2.chunk.css",
+    "static/js/main.baabfd3f.chunk.js"
+  ]
+}

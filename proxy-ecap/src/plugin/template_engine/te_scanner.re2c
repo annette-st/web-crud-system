@@ -1,0 +1,57 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include "plugin/template_engine/te_scanner.h"
+
+/* -------------------------------------------------------------------------------------------------- */
+void te_scanner_init(te_scanner* input, const char* text_begin, const char* text_end)
+{
+    input->top  = text_begin;
+    input->cur  = text_begin;
+    input->pos  = text_begin;
+    input->end  = text_end;
+
+    input->token_begin = NULL;
+    input->token_end = NULL;
+    input->token_type = 0;
+}
+
+/* -------------------------------------------------------------------------------------------------- */
+static int create_token (te_scanner* lexer, int type)
+{
+    lexer->token_type  = type;
+    lexer->token_begin = lexer->top;
+    lexer->token_end   = lexer->cur;
+    return type;
+}
+/* -------------------------------------------------------------------------------------------------- */
+int te_scan(te_scanner* lexer)
+{
+#define   YYCTYPE     char
+#define   YYCURSOR    lexer->cur
+#define   YYMARKER    lexer->ptr
+
+    if (lexer->cur >= lexer->end)
+    {
+        lexer->cur = lexer->end;
+        return TE_TOKEN_END;
+    }
+    lexer->top = lexer->cur;
+
+
+    /*!re2c
+      re2c:yyfill:enable = 0;
+      D        = [0-9] ;
+      L        = [a-zA-Z_] ;
+      LP       = "{{";
+      RP       = "}}";
+      identifier = LP L ( L | D )* RP;
+     */
+
+    /*!re2c
+
+     identifier      { return create_token (lexer, TE_TOKEN_VARIABLE); }
+     *               { return create_token (lexer, TE_TOKEN_TEXT); }
+
+     */
+    return TE_TOKEN_END;
+}

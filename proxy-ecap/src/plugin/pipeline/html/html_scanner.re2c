@@ -1,0 +1,111 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include "plugin/pipeline/html/html_scanner.h"
+
+/* -------------------------------------------------------------------------------------------------- */
+void html_scanner_init(html_scanner* input, const char* text_begin, size_t text_size)
+{
+    input->start_of_buffer = text_begin;
+    input->tok     = text_begin;
+    input->cursor  = text_begin;
+    input->marker  = text_begin;
+    input->limit   = text_begin+text_size;
+
+    input->input_size = text_size;
+
+    input->token_begin = NULL;
+    input->token_end = NULL;
+    input->token_type = 0;
+
+    input->state = -1;
+    input->yyaccept = 0;
+
+}
+
+void html_scanner_add_input(html_scanner* input, const char* text_begin, size_t delta_size)
+{
+    if (text_begin != input->start_of_buffer) /* realloc of text buffer has been occurred */
+    {
+        input->tok     = text_begin + (input->tok - input->start_of_buffer);
+        input->cursor  = text_begin + (input->cursor - input->start_of_buffer);
+        input->marker  = text_begin + (input->marker - input->start_of_buffer);
+        input->start_of_buffer = text_begin;
+    }
+    input->input_size += delta_size;
+    input->limit  = input->start_of_buffer + input->input_size;
+}
+/* -------------------------------------------------------------------------------------------------- */
+static int create_token (html_scanner* lexer, int type)
+{
+    lexer->token_type  = type;
+    if (type == TOKEN_HTML_META)
+    {
+        lexer->token_begin = lexer->cursor;
+    }
+    else
+    {
+        lexer->token_begin = lexer->tok;
+    }
+
+    lexer->token_end   = lexer->cursor;
+    return HTML_SCANNER_FOUND_TOKEN;
+}
+/* -------------------------------------------------------------------------------------------------- */
+int html_scan(html_scanner* lexer)
+{
+    char yych;
+    /*!getstate:re2c*/
+    regular:
+
+    lexer->tok = lexer->cursor;
+
+    /*!re2c
+
+        re2c:flags:case-insensitive = 1;
+
+        re2c:api:style = free-form;
+        re2c:define:YYCTYPE  = char;
+        re2c:define:YYCURSOR = lexer->cursor;
+        re2c:define:YYMARKER = lexer->marker;
+        re2c:define:YYLIMIT  = lexer->limit;
+        re2c:define:YYGETSTATE = "lexer->state";
+        re2c:variable:yyaccept   = "lexer->yyaccept";
+        re2c:define:YYSETSTATE = "lexer->state = @@;";
+        re2c:define:YYFILL     = "return HTML_SCANNER_END_OF_INPUT;";
+
+        re2c:yyfill:enable = 1;
+        re2c:indent:top = 2;
+        re2c:indent:string="    ";
+        sp          = " ";
+        htab        = "\t";
+        optspace    = (sp | htab)*;
+        space       = (sp | htab)+;
+
+        start_tag  = "<";
+        end_tag    = "/>";
+
+        any        = [\000-\377];
+
+        meta   = start_tag optspace "meta" space "http-equiv" optspace "=" optspace "\"Content-Security-Policy\"" optspace "content" optspace "=" optspace "\"";
+
+     */
+
+    /*!re2c
+     "<!-- "           {goto comment;}
+     "<head"           { return create_token(lexer, TOKEN_HTML_HEAD_START); }
+     "</head>"         { return create_token(lexer, TOKEN_HTML_HEAD_END);   }
+     "<body"           { return create_token(lexer, TOKEN_HTML_BODY_START); }
+     meta              { return create_token(lexer, TOKEN_HTML_META);}
+     "<iframe"         { return create_token(lexer, TOKEN_HTML_IFRAME);}
+     ">"               { return create_token(lexer, TOKEN_CLOSE_TAG);}
+     any               { goto regular; }
+     */
+    /* meta              { lexer->meta_begin = lexer->cursor; goto in_meta;      } */
+    comment:
+        /*!re2c
+          " -->"          { goto regular; }
+           any            { goto comment; }
+         */
+
+    return HTML_SCANNER_NOT_TOKEN;
+}

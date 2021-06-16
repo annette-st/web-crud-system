@@ -1,0 +1,118 @@
+.emptyConfigContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 135px;
+    margin: 0 16px;
+    background: #F5FAFF;
+}
+.configContainer {
+    border-top: 1px solid #DEDDDD;
+    border-bottom: 1px solid #DEDDDD;
+    cursor: pointer;
+    padding: 8px 16px;
+}
+.noConfigMessage {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #2F2F2F;
+    margin-top: 6px;
+}
+.configItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.configItem p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #2f2f2f;
+}
+.configLink {
+    padding: 10px 8px;
+    width: 100%;
+}
+.actionTitle {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    color: #2F2F2F;
+    margin-top: 24px;
+    margin-left: 16px;
+}
+.deleteConfigBtn {
+    padding: 3px;
+    margin-right: 5px;
+    border: none;
+    background-color: rgba(0,0,0,0);
+    cursor: pointer;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.deleteConfigBtn:hover {
+    border-radius: 50%;
+    background: rgba(130, 188, 255, 0.5);
+}
+.deleteConfigBtn:active {
+    border-radius: 50%;
+    background: rgba(130, 188, 255, 0.7);
+}
+.configItem:hover {
+    background: #E2F0FF;
+}
+.configItem:hover .deleteConfigBtn {
+    opacity: 1;
+}
+.createConfigBtn {
+    margin: 16px 0;
+    padding: 0 16px;
+}
+.createConfigBtn a {
+    display: flex;
+    justify-content: center;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+    background: #3496F7;
+    border-radius: 3px;
+    padding: 4px 0;
+    flex-basis: 300px;
+    flex-grow: 1;
+    margin-right: 12px;
+}
+.createConfigBtn a:last-child {
+    margin-right: 0;
+}
+.createConfigBtn a:hover {
+    background: #1976D2;
+}
+.createConfigBtn a:active {
+    background: #095DB0;
+}
+.createConfigBtn img {
+    margin-right: 12px;
+}
+.pageName {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: #2F2F2F;
+    margin-top: 16px;
+    margin-bottom: 27px;
+    margin-left: 16px;
+}
+a {
+    color: #2F2F2F;
+}

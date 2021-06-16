@@ -1,0 +1,33 @@
+.header {
+    padding: 16px;
+    border-bottom: 1px solid #F4F4F4;
+}
+.addonHelp {
+    border: none;
+    background: #064482;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 7px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.addonHelp:hover {
+    background: #063462;
+}
+.addonHelp:active {
+    background: #212D49;
+}
+.logoWrapper p {
+    color: #000;
+    font-size: 14px;
+    line-height: 24px;;
+}
+.logoWrapper img {
+    margin-right: 5px;
+    opacity: 50%
+}

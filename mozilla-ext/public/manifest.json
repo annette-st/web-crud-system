@@ -1,0 +1,38 @@
+{
+    "manifest_version": 2,
+    "name": "React CRUD Addon",
+    "version": "1.0",
+    "description": "React CRUD Addon / Diploma Project",
+    "icons": {
+        "192": "icn-plugin.svg"
+    },
+    "page_action": {
+        "default_icon": "icn-plugin.svg",
+        "default_title": "Foobar"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "scripts/jquery.min.js", "scripts/content.js"
+            ]
+        }
+    ],
+    "background": {
+        "scripts": [
+            "scripts/background.js"
+        ]
+    },
+    "permissions": [
+        "tabs",
+        "storage",
+        "webRequest",
+        "activeTab",
+        "<all_urls>"
+    ],
+    "web_accessible_resources": [
+        "index.html"
+    ]
+}

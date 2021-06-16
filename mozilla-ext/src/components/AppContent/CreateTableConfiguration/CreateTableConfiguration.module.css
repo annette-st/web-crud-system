@@ -1,0 +1,790 @@
+a {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+}
+p.notes {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #2f2f2f;
+}
+p.notesActive {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    color: #2f2f2f;
+}
+p.actionName {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    color: #2F2F2F;
+}
+.containerStep1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0 16px;
+}
+.pageName {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: #2F2F2F;
+    margin-bottom: 4px;
+}
+.pageFormName {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: #2F2F2F;
+    margin-bottom: 32px;
+}
+.configName {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: #2F2F2F;
+    margin-top: -4px;
+}
+.configNameForm {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.configNameForm label {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #737E9B;
+    margin-bottom: 4px;
+    align-self: flex-start;
+}
+.configNameForm input {
+    background: #FFFFFF;
+    border: 1px solid #B8C1CE;
+    box-sizing: border-box;
+    padding: 6px 16px;
+    border-radius: 3px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #2F2F2F;
+    width: 100%;
+}
+.configNameForm input::placeholder {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #9BA7BA;
+}
+.configNameForm button {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #ffffff;
+    padding: 4px 16px;
+    background: #3496F7;
+    border-radius: 3px;
+    border: none;
+    margin-top: 16px;
+}
+.generalStepContainer {
+    padding: 0 16px;
+}
+.stepNumber {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #2F2F2F;
+    margin-bottom: 32px;
+}
+.prevButton {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #2f2f2f;
+    background: #fff;
+    border-radius: 3px;
+    border: none;
+    padding: 4px 40px;
+}
+.prevButton:hover {
+    background: #E2F0FF;
+}
+.prevButton:active {
+    background: #C6E0FF;
+}
+.nextButton {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #ffffff;
+    background: #3496F7;
+    border-radius: 3px;
+    border: none;
+    padding: 4px 50px;
+}
+.nextButton:hover {
+    background: #1976D2;
+}
+.nextButton:active {
+    background: #095DB0;
+}
+.nextButton:disabled {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #8E9BAE;
+    background: #DEE1E4;
+    border-radius: 3px;
+    border: none;
+    padding: 4px 50px;
+}
+.nextButtonStep1 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+    background: #3496F7;
+    border-radius: 3px;
+    border: none;
+    padding: 4px 16px;
+}
+.nextButtonStep1:disabled {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #8E9BAE;
+    background: #DEE1E4;
+    border-radius: 3px;
+    border: none;
+    padding: 4px 16px;
+}
+.backToConfigContainer {
+    padding: 0 16px;
+}
+.backToConfig {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px 0 22px 0;
+    color: #3496F7;
+}
+.backToConfig img {
+    margin-right: 8px;
+}
+.configureManually {
+    border: 1px solid #1976D2;
+    border-radius: 3px;
+    padding: 4px 12px;
+    width: 130px;
+    margin-top: 18px;
+}
+.configureManually a {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #1976D2;
+    text-decoration: none;
+}
+.configNameAction {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
+.configNameAction button {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #ffffff;
+    background: #3496F7;
+    border-radius: 3px;
+    border: none;
+    padding: 4px 16px;
+}
+.navButtons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+.manualConfigAlert {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 240px;
+}
+.manualConfigAlert img {
+    margin-bottom: 12px;
+    width: 80px;
+}
+.manualConfigAlert p {
+    max-width: 200px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.animation {
+    margin-top: 24px;
+}
+.headersContainer  {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.headersContainer span {
+    padding: 0;
+    margin: 0 4px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+}
+.headerItem {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    padding: 7px 16px;
+}
+.headerItem span {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #737E9B;
+}
+.headerItem:hover {
+    background: #E2F0FF;
+}
+.editingContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 16px;
+    margin-bottom: 30px;
+}
+.editingContainer p {
+    flex: 1;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #393939;
+}
+.editingContainer input[type=text] {
+    background: #FFFFFF;
+    border: 1px solid #C3CAD4;
+    border-radius: 3px;
+    padding: 6px 12px;
+    margin-right: 12px;
+    flex: 1;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #505050;
+}
+.editingContainer input[type=text]::placeholder {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #A7B1BF;
+}
+.cancelEditBtn {
+    border: none;
+    background: rgba(0,0,0,0);
+}
+.saveConfigName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #3496F7;
+    border-radius: 3px;
+    border: none;
+    width: 48px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #fff;
+    padding: 4px 8px;
+}
+.saveConfigName:disabled {
+    color: #8E9BAE;
+    background: #DEE1E4;
+}
+.editConfigName {
+    border: 1px solid #1976D2;
+    border-radius: 3px;
+    background: #fff;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #1976D2;
+    padding: 2px 10px;
+}
+.editConfigName img {
+    margin-right: 7px;
+}
+.tabsWrapper {
+    margin-top: 20px;
+}
+.tabLinkWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: #ffffff;
+}
+.tabsContent {
+    display: flex;
+    flex-direction: column;
+    background: #F0F7FF;
+    padding: 23px 4px;
+}
+.tabLink {
+    border: none;
+    background: #fff;
+    padding: 6px 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #737E9B;
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tabLink:hover {
+    background: #F0F7FF;
+}
+.tabLink:active {
+    background: #C6E0FF;
+}
+.tabLinkActive {
+    border: none;
+    background: #F0F7FF;
+    padding: 6px 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #2F2F2F;
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tabLink img {
+    margin-left: 6px;
+}
+.tabLinkActive img {
+    margin-left: 6px;
+}
+p.noSeqAlert {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #2F2F2F;
+    margin-bottom: 10px;
+    margin-left: 12px;
+}
+.addSeqButton {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #FFFFFF;
+    padding: 4px 12px;
+    background: #095DB0;
+    border-radius: 3px;
+    border: none;
+    margin-top: 12px;
+    margin-left: 12px;
+    width: 81px;
+}
+.addSeqButton a {
+    text-decoration: none;
+    color: #fff;
+}
+.seqItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.seqItem:hover {
+    background: #C6E0FF;
+}
+.seqItem a {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #737E9B;
+    padding: 6px 12px;
+    width: 100%;
+}
+.seqItem:hover a {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #2F2F2F;
+}
+.deleteConfigBtn {
+    border: none;
+    background-color: rgba(0,0,0,0);
+    cursor: pointer;
+    opacity: 0;
+}
+.seqItem:hover .deleteConfigBtn {
+    opacity: 1;
+}
+.deleteConfigBtn {
+    padding: 3px;
+    margin-right: 5px;
+    border: none;
+    background-color: rgba(0,0,0,0);
+    cursor: pointer;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.deleteConfigBtn:hover {
+    border-radius: 50%;
+    background: rgba(130, 188, 255, 0.5);
+}
+.deleteConfigBtn:active {
+    border-radius: 50%;
+    background: rgba(130, 188, 255, 0.7);
+}
+.tableViewsSwitcher {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 23px;
+}
+.tableViewsSwitcher label {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #737E9B;
+}
+.saveConfigButton {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #FFFFFF;
+    width: 100%;
+    padding: 4px 0;
+    display: flex;
+    justify-content: center;
+    background: #3496F7;
+    border-radius: 3px;
+    border: none;
+}
+.saveConfigButton:hover {
+    background: #1976D2;
+}
+.saveConfigButton:active {
+    background: #095DB0;
+}
+.seqNameContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.seqNameContainer p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #393939;
+}
+.seqPrompt {
+    background: #F0F7FF;
+    margin-bottom: 32px;
+}
+.seqPrompt p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #393939;
+}
+button.seqPromptHeader {
+    display: flex;
+    align-items: center;
+    padding: 8px 11px;
+    border: none;
+    background: #F0F7FF;
+    width: 100%;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #393939;
+}
+button.seqPromptHeader:hover {
+    font-weight: bold;
+    background: #E2F0FF;
+}
+button.seqPromptHeader:active {
+
+}
+.seqPromptHeader img {
+    margin-right: 11px;
+}
+.seqPromptContainer {
+    padding: 4px 8px;
+}
+.startRecButton {
+    margin-top: 12px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+    padding: 4px 13px;
+    background: #3496F7;
+    border-radius: 3px;
+    border: none;
+}
+.startRecButton:hover {
+    background: #1976D2;
+}
+.startRecButton:active {
+    background: #095DB0;
+}
+.stopRecButton {
+    margin-top: 12px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+    padding: 4px 13px;
+    background: #FB5F66;
+    border-radius: 3px;
+    border: none;
+}
+.stopRecButton:hover {
+    background: #E4585E;
+}
+.stopRecButton:active {
+    background: #D35257;
+}
+.promptContent {
+    padding: 8px;
+}
+.recordingActionBlock {
+    margin-top: 32px;
+}
+.recordingActionBlockItems {
+    border-left: 1px solid #DEE5EF;
+}
+p.actionItem {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #393939;
+    margin-left: 8px;
+}
+.actionIsRecording {
+    padding: 4px 12px;
+}
+.actionIsRecording p {
+    font-style: italic;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #737373;
+}
+.rollbackIsRecording {
+    padding: 4px 24px;
+}
+.rollbackIsRecording p {
+    font-style: italic;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #737373;
+}
+
+.mainActionsContainer p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #393939;
+}
+p.actionHeader {
+    margin-left: 8px;
+}
+p.activeActionHeader {
+    font-weight: bold;
+}
+.recordingActions {
+    margin: 16px 0;
+}
+.recordingActions button {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #1976D2;
+    background: #ffffff;
+    border: 1px solid #1976D2;
+    border-radius: 3px;
+    margin-right: 8px;
+    padding: 2px 13px;
+}
+.recordingActions button:hover {
+    color: #095DB0;
+    border: 1px solid #095DB0;
+}
+.recordingActions button:active {
+    color: #064482;
+    border: 1px solid #064482;
+}
+.recordingActions button:disabled {
+    color: #8E9BAE;
+    background: #DEE1E4;
+    border: 1px solid #DEE1E4;
+}
+.rollbackContainer {
+    margin-left: 16px;
+    padding: 4px 12px;
+}
+.addedActionItem {
+    width: 100%;
+}
+.addedActionItem:hover {
+    background-color: #F0F7FF;
+}
+.settingsContainer {
+    padding: 0 16px;
+    margin-bottom: 25px;
+}
+/* configuration form settings */
+.defineFieldsContainer {
+
+}
+.defineInputNameContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.defineInputNameContainer input[type=text] {
+    background: #FFFFFF;
+    border: 1px solid #B8C1CE;
+    border-radius: 3px;
+    padding: 6px 12px;
+    flex: 1;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #505050;
+}
+.defineInputNameContainer input[type=text]::placeholder {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #A7B1BF;
+}
+.defineInputNameContainer button {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    border-radius: 3px;
+    padding: 6px 8px;
+    color: #ffffff;
+    background: #3496F7;
+    margin-left: 8px;
+    border: none;
+}
+.defineInputNameContainer button:hover {
+    color: #ffffff;
+    background: #1976D2;
+}
+.defineInputNameContainer button:active {
+    color: #ffffff;
+    background: #095DB0;
+}
+.defineInputNameContainer button:disabled {
+    color: #8E9BAE;
+    background: #DEE1E4;
+}
+.addedFormFields {
+    margin-top: 16px;
+    padding-left: 12px;
+}
+.addedFormFields p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #393939;
+    margin-bottom: 8px;
+}
+.isInputRecording span {
+    font-style: italic;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #737373;
+    margin-bottom: 8px;
+}
+.confirmByEnterSwitcher {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: -8px;
+    margin-bottom: 23px;
+}
+.confirmByEnterSwitcher label {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #737E9B;
+}
+

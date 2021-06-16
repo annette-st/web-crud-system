@@ -1,0 +1,101 @@
+/*a {*/
+/*    text-decoration: none;*/
+/*    font-style: normal;*/
+/*    font-weight: normal;*/
+/*    font-size: 12px;*/
+/*    line-height: 16px;*/
+/*}*/
+/*img.animation {*/
+/*    margin-top: 24px;*/
+/*    margin-bottom: 20px;*/
+/*}*/
+/*.stepContainer {*/
+/*    width: 100%;*/
+/*}*/
+/*.stepContainer p {*/
+/*    font-style: normal;*/
+/*    font-weight: normal;*/
+/*    font-size: 12px;*/
+/*    line-height: 16px;*/
+/*    color: #2f2f2f;*/
+/*    margin-bottom: 12px;*/
+/*}*/
+/*.navButtons {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    width: 100%;*/
+/*}*/
+/*.navButtons button {*/
+/*    font-style: normal;*/
+/*    font-weight: normal;*/
+/*    font-size: 14px;*/
+/*    line-height: 20px;*/
+/*    border: none;*/
+/*    padding: 4px 50px;*/
+/*}*/
+/*.prevButton {*/
+/*    margin-right: 8px;*/
+/*    color: #2F2F2F;*/
+/*    background-color: #ffffff;*/
+/*}*/
+/*.prevButton a {*/
+/*    text-decoration: none;*/
+/*}*/
+/*.nextButton {*/
+/*    color: #ffffff;*/
+/*    background: #3496F7;*/
+/*    border-radius: 3px;*/
+/*}*/
+/*.pageName {*/
+/*    font-style: normal;*/
+/*    font-weight: bold;*/
+/*    font-size: 16px;*/
+/*    line-height: 24px;*/
+/*    margin-bottom: 4px;*/
+/*}*/
+/*.stepNumber {*/
+/*    font-style: normal;*/
+/*    font-weight: normal;*/
+/*    font-size: 14px;*/
+/*    line-height: 16px;*/
+/*    color: #2F2F2F;*/
+/*    margin-bottom: 32px;*/
+/*}*/
+/*.configureManually {*/
+/*    border: 1px solid #1976D2;*/
+/*    border-radius: 3px;*/
+/*    padding: 4px 12px;*/
+/*    width: 130px;*/
+/*}*/
+/*.configureManually a {*/
+/*    font-style: normal;*/
+/*    font-weight: normal;*/
+/*    font-size: 14px;*/
+/*    line-height: 20px;*/
+/*    color: #1976D2;*/
+/*    text-decoration: none;*/
+/*}*/
+/*p.stepCond {*/
+/*    font-style: normal;*/
+/*    font-weight: normal;*/
+/*    font-size: 12px;*/
+/*    line-height: 16px;*/
+/*    margin: 2px 0;*/
+/*}*/
+/*p.stepCondActive {*/
+/*    font-style: normal;*/
+/*    font-weight: bold;*/
+/*    font-size: 12px;*/
+/*    line-height: 16px;*/
+/*    margin: 2px 0;*/
+/*}*/
+/*.backToConfig {*/
+/*    display: flex;*/
+/*    justify-content: flex-start;*/
+/*    align-items: center;*/
+/*    margin: 10px 0 22px 0;*/
+/*}*/
+/*.backToConfig img {*/
+/*    margin-right: 8px;*/
+/*}*/

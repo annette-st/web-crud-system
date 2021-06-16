@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  font-family: 'Noto Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: auto;
+}
+.scroll {
+  border: 1px solid #DEE5EF;
+  overflow: scroll;
+  display: inline-block;
+}
+
+img.icnLoading {
+  animation: 1s linear 0s normal none infinite running icnLoading;
+  -webkit-animation: 1s linear 0s normal none infinite running icnLoading;
+  width: 16px;
+  height: 16px;
+}
+@keyframes icnLoading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes icnLoading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+span.MuiTypography-root {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+}
+a {
+  text-decoration: none;
+}
+.action-item {
+  padding: 4px;
+}
+.action-item.hover:hover {
+  background: #E2F0FF;
+  cursor: pointer;
+}
+label.MuiFormControlLabel-root {
+  padding: 10px 8px;
+  margin: 0;
+  width: 95%;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #737E9B;
+}
+label.MuiFormControlLabel-root:hover {
+  background: #E2F0FF;
+  color: #2F2F2F;
+}
